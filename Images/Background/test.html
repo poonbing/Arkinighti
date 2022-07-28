@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes move {
+            0%{left:0px}
+            100%{left:200px}
+        }
+        @keyframes unmove {
+            0%{left:200px}
+            100%{left:0px}
+        }
+        #box{
+            width: 35px;
+            height: 35px;
+            background-color: gray;
+            position: relative;
+        }
+    </style>
+    <script>
+        function shift() {
+            document.getElementById("box").style.animation = "move 1s 1s";
+        }
+
+        function unshift() {
+            document.getElementById("box").style.animation = "unmove 1s 1s"
+        }
+    </script>
+</head>
+<body>
+    <button onclick="shifter()" >bruh</button>
+    <div id="box"></div>
+</body>
+</html>

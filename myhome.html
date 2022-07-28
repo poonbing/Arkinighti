@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      /* Sidebar */
+      .sidebar {
+        height: 100%;
+        width: 75px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        padding-top: 60px;
+        transition: 0.5s;
+      }
+      
+      .sidebar a {
+        text-decoration: none;
+        padding: 10px 20px 10px 20px;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+      
+      .sidebar a img
+      .sidebar a img{
+          padding: 20px 20px 20px 20px;
+      }
+
+      .sidebar a:hover {
+        color: white;
+      }
+  
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        font-size: 36px;
+      }
+  
+      @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
+      /* Sidebar */
+      /* intro */
+      .intro{
+        padding-left: 75px;
+      }
+    </style>
+    <script>
+      let change = 0
+      function interactNav() {
+          change += 1;
+          if (change%2 === 1) {
+              document.getElementById("mySidebar").style.width = "220px";
+              setTimeout(() => {
+                document.getElementsByTagName("span")[0].innerText = "Home";
+                document.getElementsByTagName("span")[1].innerText = "Operator";
+                document.getElementsByTagName("span")[2].innerText = "Combat";
+                document.getElementsByTagName("span")[3].innerText = "Base";
+                document.getElementsByTagName("span")[4].innerText = "Recruitment";
+                document.getElementsByTagName("span")[5].innerText = "Headhunt";
+                document.getElementsByTagName("span")[6].innerText = "Depot";
+                document.getElementsByTagName("span")[7].innerText = "Event";
+              }, 300);
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+          }
+          else{
+              document.getElementById("mySidebar").style.width = "75px";
+              document.getElementsByTagName("span")[0].innerText = "";
+              document.getElementsByTagName("span")[1].innerText = "";
+              document.getElementsByTagName("span")[2].innerText = "";
+              document.getElementsByTagName("span")[3].innerText = "";
+              document.getElementsByTagName("span")[4].innerText = "";
+              document.getElementsByTagName("span")[5].innerText = "";
+              document.getElementsByTagName("span")[6].innerText = "";
+              document.getElementsByTagName("span")[7].innerText = "";
+              document.body.style.backgroundColor = "white";
+          }
+      }
+    </script>
+</head>
+<body>
+    </div>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="interactNav()">&#9776;</a>
+      <a href="home.html"><img src="icon/Home_icon.webp" style="width:35px;height:35px"><span></span></a>
+      <a href="#"><img src="icon/Operator_icon.webp" style="width:35px;height:35px"><span></span></a>
+      <a href="#"><img src="icon/Combat_icon.webp" style="width:35px;height:35px"><span></span></a>
+      <a href="#"><img src="icon/Base_icon.webp" style="width:35px;height:35px"><span></span></a>
+      <a href="#"><img src="icon/Recruit_icon.webp" style="width:35px;height:35px"><span></span></a>
+      <a href="#"><img src="icon/Headhunt_icon.webp" style="width:35px;height:35px"><span></span></a>
+      <a href="#"><img src="icon/Depot_icon.webp" style="width:35px;height:35px"><span></span></a>
+      <a href="#"><img src="icon/Event_icon.webp" style="width:35px;height:35px"><span></span></a>
+    </div>
+    <div class="intro">
+      <p>
+          Arknights: the chad's mobile tower defense game. Arknights' Global server was released on 19 January 2020, to all countries except China and Taiwan who have their own respective servers. 
+      </p>
+      <p>
+          It may seem like Arknights is the regular tower defense game with gacha waifus included, but its not. It goes out of its way to eliminate monkey brain stratergies and forces players to use more than 120% of their brain to actually play the game.
+      </p>
+      <p>
+          Disclaimer: Players do not need to have 6* operators to win the game. Proven by the gigachad <a href="https://www.youtube.com/channel/UCWwuijyo4x78iXup5hOvkbw">KyostinV</a>.
+      </p>
+  </div>
+</body>
+</html>

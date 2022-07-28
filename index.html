@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        background-image: url("Images/Background/who.jpg");
+        background-size: cover;
+        background-color: white;
+      }
+      /*sidebar css*/
+      .sidebar {
+        height: 100%; 
+        width: 75px; 
+        position: fixed; 
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111; 
+        overflow-x: hidden;
+        overflow-y: hidden; 
+        padding-top: 60px; 
+        transition: 0.5s; 
+      }
+      
+      .sidebar a {
+        text-decoration: none;
+        padding: 10px 20px 10px 20px;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .sidebar a img{
+          padding: 20px 20px 0px 0px;
+      }
+
+      .sidebar a:hover, .largebar a:hover {
+        color: white;
+      }
+  
+      .sidebar .closebtn {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        font-size: 36px;
+      }
+
+      div.largebar {
+        height: 100%; 
+        width: 220px;
+        margin-top: -7px;
+        margin-left: -220px;
+        position: fixed; 
+        z-index: 0;
+        top: 0;
+        left: 0;
+        background-color: #111; 
+        overflow-x: hidden;
+        overflow-y: hidden; 
+        padding-top: 60px; 
+        transition: 0.5s; 
+      }
+      
+      .largebar a {
+        text-decoration: none;
+        padding: 10px 20px 10px 20px;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: 0.3s;
+      }
+
+      .largebar a img{
+          padding-top: 20px;
+      }
+  
+      .largebar .closebtn {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        font-size: 36px;
+      }
+      @media screen and (max-height: 450px) {
+        .sidebar {padding-top: 15px;}
+        .sidebar a {font-size: 18px;}
+      }
+      /*sidebar css*/
+
+      /*body css*/
+      .home{
+        width: 50%;
+        margin: auto;
+        padding: 5px 0px 5px 0px;
+        background-color: #111;
+        color: white;
+        padding: 25px;
+        text-align: center;
+        border-radius: 25px;
+      }
+
+      .home img{
+        align-content: left;
+      }
+
+      .bar{
+        background-color: white;
+        color: black;
+        padding: 5px;
+        font-size: 30px;
+      }
+
+      .home a{
+        font-size: 150%;
+        color: orange;
+      }
+
+      .bonus{
+        display: flex;
+        flex-direction: row;
+        width: 50%;
+        margin:auto;
+        padding: 5px 0px 5px 0px;
+        background-color: #111;
+        color: white;
+        padding: 25px;
+        text-align: center;
+        border-radius: 25px;
+        margin-top: 10px;
+      }
+
+      .subbar{
+        background-color: white;
+        color: black;
+        padding: 5px;
+        font-size: 20px;
+        font-style: italic;
+      }
+
+      .news, .new_op{
+              color: white;
+              padding: 25px;
+              text-align: center;
+            }
+      .news img{
+        width: 100%;
+      }
+      
+      .new_op{
+        display: flex;
+        flex-direction: column;
+      }
+
+      .new_op img{
+        width: 100%;
+      }
+
+      .news span{
+        font-size: 150%;
+        background-color: white;
+        color: black;
+        margin: auto;
+      }
+      /*body css*/
+    </style>
+    <script>
+      /*extend sidebar*/
+      function interactNav() {
+          let count = document.getElementById("myLargebar").style.marginLeft;
+          document.getElementById("myLargebar").style.marginLeft = "0px";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+          if (count == "-220px") {
+              document.getElementById("myLargebar").style.marginLeft = "0px";
+              document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+          }
+          if (count == "0px"){
+              document.getElementById("myLargebar").style.marginLeft = "-220px";
+              document.body.style.backgroundColor = "white";
+          }
+      }
+
+      /*hide sidebar on scroll*/
+      var currentscroll = window.pageYOffset;
+      window.onscroll = function() {
+        var newscroll = window.pageYOffset;
+        if (currentscroll > newscroll) {
+          document.getElementById("mySidebar").style.marginLeft = "0px";
+        } else {
+          document.getElementById("mySidebar").style.top = "-50px";
+        }
+        currentscroll = newscroll;
+      }
+    </script>
+</head>
+<body>
+    </div>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="interactNav()">&#9776;</a>
+      <a href="myhome.html"><img src="Images/Icon/Home_icon.webp" style="width:35px;height:35px"></a>
+      <a href="#"><img src="Images/Icon/Operator_icon.webp" style="width:35px;height:35px"></a>
+      <a href="#"><img src="Images/Icon/Combat_icon.webp" style="width:35px;height:35px"></a>
+      <a href="#"><img src="Images/Icon/Base_icon.webp" style="width:35px;height:35px"></a>
+      <a href="#"><img src="Images/Icon/Recruit_icon.webp" style="width:35px;height:35px"></a>
+      <a href="#"><img src="Images/Icon/Headhunt_icon.webp" style="width:35px;height:35px"></a>
+      <a href="#"><img src="Images/Icon/Depot_icon.webp" style="width:35px;height:35px"></a>
+      <a href="#"><img src="Images/Icon/Event_icon.webp" style="width:35px;height:35px"></a>
+    </div>
+    <div id="myLargebar" class="largebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="interactNav()">&#9776;</a>
+      <a href="myhome.html">
+        <img src="Images/Icon/Home_icon.webp" style="width:35px;height:35px">
+        <img src="Images/Icon/spacer.png" style="width:35px;height:35px">
+        Home
+      </a>
+      <a href="#">
+        <img src="Images/Icon/Operator_icon.webp" style="width:35px;height:35px">
+        <img src="Images/Icon/spacer.png" style="width:35px;height:35px">
+        Operator
+      </a>
+      <a href="#">
+        <img src="Images/Icon/Combat_icon.webp" style="width:35px;height:35px">
+        <img src="Images/Icon/spacer.png" style="width:35px;height:35px">
+        Combat
+      </a>
+      <a href="#">
+        <img src="Images/Icon/Base_icon.webp" style="width:35px;height:35px">
+        <img src="Images/Icon/spacer.png" style="width:35px;height:35px">
+        Base
+      </a>
+      <a href="#">
+        <img src="Images/Icon/Recruit_icon.webp" style="width:35px;height:35px">
+        <img src="Images/Icon/spacer.png" style="width:35px;height:35px">
+        Recruit
+      </a>
+      <a href="#">
+        <img src="Images/Icon/Headhunt_icon.webp" style="width:35px;height:35px">
+        <img src="Images/Icon/spacer.png" style="width:35px;height:35px">
+        Headhunt
+      </a>
+      <a href="#">
+        <img src="Images/Icon/Depot_icon.webp" style="width:35px;height:35px">
+        <img src="Images/Icon/spacer.png" style="width:35px;height:35px">
+        Depot
+      </a>
+      <a href="#">
+        <img src="Images/Icon/Event_icon.webp" style="width:35px;height:35px">
+        <img src="Images/Icon/spacer.png" style="width:35px;height:35px">
+        Event
+      </a>
+    </div>
+    <div class="home" id="home">
+      <img src="Images/home/Arknights_logo.webp">
+      <p class="bar">Dirty deeds done dirt cheap</p>
+      <p>
+        Arknights: the chad's mobile tower defense game. Arknights' Global server was released on 19 January 2020, to all countries except China and Taiwan who have their own respective servers. 
+      </p>
+      <p>
+          It may seem like Arknights is the regular tower defense game with gacha waifus included, but its not. It goes out of its way to eliminate monkey brain stratergies and forces players to use more than 120% of their brain to actually play the game.
+      </p>
+      <p>
+          Disclaimer: Players do not need to have 6* operators to win the game. Proven by the gigachad: <a href="https://www.youtube.com/channel/UCWwuijyo4x78iXup5hOvkbw">KyostinV</a>.
+      </p>
+    </div>
+    <div class="bonus">
+      <div class="news">
+        <p class="subbar">Current news flash</p>
+        <p>
+          <img src="Images/event/intro to wine.webp">
+          <br>
+          <span>Introduction To Wine</span>
+          <br>
+          <p>Another mid-anniversary event, featuring yet another dragonic waifu of the mystic race of Lung. Ling, one of the 12 Lungs to roam the grounds of Terra.</p>
+          <p>And with another anniverasy event, comes the goated Lungmen Lucky Strips. With chance of getting more Orundum to fuel your gacha spirit</p>
+        </p>
+      </div>
+      <div class="new_op">
+        <p class="subbar">Bussin New Operators</p>
+        <img class="ling" src="Images/operator/smol ling.png">
+        <br>
+        <img class="lee" src="Images/operator/smol lee.png">
+        <br>
+        <img class="dark" src="Images/operator/smol dark.png">
+        <br>
+      </div>
+    </div>
+</body>
+</html>
